@@ -170,7 +170,6 @@ public class Practice10Test {
         Student jerry = new Student(1, "Jerry", 8, new Klass(3));
 
         klass.appendMember(jerry);
-        System.out.println(systemOut());
 
         assertThat(systemOut().endsWith("I am Tom. I know Jerry has joined Class 2.\n")).isTrue();
     }
@@ -184,7 +183,7 @@ public class Practice10Test {
 
         klass.appendMember(jerry);
         klass.assignLeader(jerry);
-        
+
         assertThat(systemOut().endsWith("I am Tom. I know Jerry become Leader of Class 2.\n")).isTrue();
     }
 }

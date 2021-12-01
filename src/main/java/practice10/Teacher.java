@@ -52,9 +52,9 @@ public class Teacher extends Person implements PropertyChangeListener {
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
         if (evt.getPropertyName().equals("studentList")) {
-            System.out.printf("I am %s. I know %s has joined Class %d.\n", getName(), evt.getNewValue(), ((Student)evt.getNewValue()).getKlass().getNumber());
+            System.out.printf("I am %s. I know %s has joined Class %d.\n", getName(), ((Student)evt.getNewValue()).getName(), ((Student)evt.getNewValue()).getKlass().getNumber());
         } else if (evt.getPropertyName().equals("leader")) {
-            System.out.printf("I am %s. I know %s become Leader of Class %d.\n", getName(), evt.getNewValue(), ((Student)evt.getNewValue()).getKlass().getNumber());
+            System.out.printf("I am %s. I know %s become Leader of Class %d.\n", getName(), ((Student)evt.getNewValue()).getName(), ((Student)evt.getNewValue()).getKlass().getNumber());
         }
     }
 }
